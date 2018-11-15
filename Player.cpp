@@ -1,5 +1,5 @@
 /*
-Author: 		Annie Wu
+Author:			Annie Wu
 Assignment:		Homework #3
 
 Class:			CS 2560.01 - C++ Programming
@@ -12,6 +12,7 @@ Purpose:		This file contains the number of players and which questions each play
 #include "Player.h"
 #include "Question.h"
 #include <iostream>
+#include <iomanip>
 #include <vector>
 using namespace std;
 
@@ -26,20 +27,47 @@ void Player::addWrong(Question *q) {
 }
 
 //print question if answered right
-void Player::printIfRight(Question *q) {
+void Player::print(Question *q) {
 
-	int size = static_cast<int>(right.size());
+	int sizeRight = static_cast<int>(right.size());
+	int sizeWrong = static_cast<int>(wrong.size());
 
-	//if no questions are in the right vector
-	if (size == 0) {
-		cout << "";
+	//if the right vector is empty, the question must be in the wrong vector
+	if (right.empty()) {
+		for (int i = 0; i < sizeWrong; i++) {
+			//if the question is in the right vector, print the question
+			if (wrong[i] == q) {
+				cout << "\t" << left << setw(57) << q->getQuestion() << setw(10) << " WRONG" << endl;
+			}
+		}
 	}
-	else {
-		//look through right vector to see if question q is in it
-		for (int i = 0; i < size; i++) {
+
+	//if  the wrong vector is empty, the question must be in the right vector
+	else if (wrong.empty()) {
+		for (int i = 0; i < sizeRight; i++) {
 			//if the question is in the right vector, print the question
 			if (right[i] == q) {
-				cout << "\t" << q->getQuestion() << endl;
+				cout << "\t" << left << setw(57) << q->getQuestion() << setw(10) << " RIGHT" << endl;
+			}
+		}
+	}
+
+	//neither are empty, so just check both vectors for the question
+	else {
+		//look through right vector to see if question q is in it
+		for (int i = 0; i < sizeRight; i++) {
+			//if the question is in the right vector, print the question
+			if (right[i] == q) {
+				cout << "\t" << left << setw(57) << q->getQuestion() << setw(10) << " RIGHT" << endl;
+				return;
+			}
+		}
+		//look through wrong vector to see if question q is in it
+		for (int i = 0; i < sizeWrong; i++) {
+			//if the question is in the right vector, print the question
+			if (wrong[i] == q) {
+				cout << "\t" << left << setw(57) << q->getQuestion() << setw(10) << " WRONG" << endl;
+				return;
 			}
 		}
 	}
