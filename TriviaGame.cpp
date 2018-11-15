@@ -47,7 +47,7 @@ int main() {
 		3);
 
 	//Question 4
-	q[3] = new Question("Which superhero is nicknamed the Scarlett Speedster?",
+	q[3] = new Question("Who is nicknamed the Scarlett Speedster?",
 		"The Flash", //answer
 		"Speedball",
 		"Stardust",
@@ -55,7 +55,7 @@ int main() {
 		1);
 
 	//Question 5
-	q[4] = new Question("Which superhero was given a special serum to help the war effort?",
+	q[4] = new Question("Who was given a special serum to help the war effort?",
 		"The Hulk",
 		"Captain America", //answer
 		"Spiderman",
@@ -63,7 +63,7 @@ int main() {
 		2);
 
 	//Question 6
-	q[5] = new Question("Who is NOT one of the Fantastic Four superheroes?",
+	q[5] = new Question("Who is not one of the Fantastic Four superheroes?",
 		"The Thing",
 		"The Human Torch",
 		"The Punisher", //answer
@@ -79,7 +79,7 @@ int main() {
 		2);
 
 	//Question 8
-	q[7] = new Question("In which part of New York City would you find Daredevil?",
+	q[7] = new Question("Where in New York City would you find Daredevil?",
 		"The Bronx",
 		"Manhattan",
 		"Hell's Kitchen", //answer
@@ -95,7 +95,7 @@ int main() {
 		1);
 
 	//Question 10
-	q[9] = new Question("Which superhero is the medical doctor for the X-men?",
+	q[9] = new Question("Who is the medical doctor for the X-men?",
 		"Ice Man",
 		"Shadowcat",
 		"Storm",
@@ -120,7 +120,9 @@ int main() {
 	}
 
 	bool run = true;
-	int questionNumber = 0; //by q[] number, not Question #
+	//by q[] number, not Question #
+	int questionNumber = 0; 
+	//user inputs a guess
 	int guess = 0;
 
 	while (run) {
@@ -148,23 +150,25 @@ int main() {
 			questionNumber++;
 		}
 
+		cout << endl << "------------------------------------------------------------------------";
+
 		//for each player print the question that were answered right
 		for (int i = 0; i < size; i++) {
-			cout << "\nThe questions Player " << i + 1 << " got correct are: \n";
-			//if it is first 5 questions
+			cout << "\nPlayer " << i+1 << " Results: " << endl;
+			//if it is first 5 questions (q[0] to q[4])
 			if (questionNumber < 6) {
 				for (int j = 0; j < 5; j++) {
-					p[i]->printIfRight(q[j]);
+					p[i]->print(q[j]);
 				}
 			}
-			//else it is the last 5 questions
+			//else it is the last 5 questions (q[5] to q[9])
 			else {
 				for (int j = 5; j < 10; j++) {
-					p[i]->printIfRight(q[j]);
+					p[i]->print(q[j]);
 				}
 			}
 		}
-		
+
 		//Allow the user to play again, asking 5 different questions this time. 
 		//Re-use the same Player objects, but make sure to clear the necessary data. 
 		string choice;
@@ -172,7 +176,9 @@ int main() {
 		cin >> choice;
 		if (choice == "N" || choice == "n") {
 			run = false;
-			cout << "\nThanks for playing Annie's Superhero Trivia Game!! Hope you had fun!\n";
+			cout << endl << "------------------------------------------------------------------------";
+			cout << endl << "  Thanks for playing Annie's Superhero Trivia Game!! Hope you had fun!";
+			cout << endl << "------------------------------------------------------------------------";
 		}
 		else {
 			//reset right and wrong vectors for each player
@@ -182,7 +188,7 @@ int main() {
 
 			//if the players want to replay the game after the 2nd time
 			//OR play for any further odd number of times
-			//reset questionNumber to go back to the first 5 questions
+			//reset questionNumber to go back to the first question q[0]
 			if (questionNumber > 6) {
 				questionNumber = 0;
 			}
