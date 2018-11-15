@@ -25,7 +25,7 @@ int main() {
 	//Question 1
 	q[0] = new Question("What city does Batman live in?",
 		"Star City",
-		"Gotham City",
+		"Gotham City", //answer
 		"National City",
 		"Metropolis",
 		2);
@@ -35,20 +35,20 @@ int main() {
 		"Tungsten",
 		"Chromium",
 		"Titanium",
-		"Vibranium",
+		"Vibranium", //answer
 		4);
 
 	//Question 3
 	q[2] = new Question("What is Superman's weakness?",
 		"Cosmonite",
 		"Samsonite",
-		"Kryptonite",
+		"Kryptonite", //answer
 		"Plutonite",
 		3);
 
 	//Question 4
 	q[3] = new Question("Which superhero is nicknamed the Scarlett Speedster?",
-		"The Flash",
+		"The Flash", //answer
 		"Speedball",
 		"Stardust",
 		"Kid Flash",
@@ -57,7 +57,7 @@ int main() {
 	//Question 5
 	q[4] = new Question("Which superhero was given a special serum to help the war effort?",
 		"The Hulk",
-		"Captain America",
+		"Captain America", //answer
 		"Spiderman",
 		"Wolfman",
 		2);
@@ -66,14 +66,14 @@ int main() {
 	q[5] = new Question("Who is NOT one of the Fantastic Four superheroes?",
 		"The Thing",
 		"The Human Torch",
-		"The Punisher",
+		"The Punisher", //answer
 		"The Invisible Girl",
 		3);
 
 	//Question 7
 	q[6] = new Question("How many Infinity Stones are there?",
 		"Five",
-		"Six",
+		"Six", //answer
 		"Seven",
 		"Eight",
 		2);
@@ -82,13 +82,13 @@ int main() {
 	q[7] = new Question("In which part of New York City would you find Daredevil?",
 		"The Bronx",
 		"Manhattan",
-		"Hell's Kitchen",
+		"Hell's Kitchen", //answer
 		"Queens",
 		3);
 
 	//Question 9
 	q[8] = new Question("Which superheroes' real name is Arthur Curry?",
-		"Aquaman",
+		"Aquaman", //answer
 		"Hawkman",
 		"The Flash",
 		"The Falcon",
@@ -99,7 +99,7 @@ int main() {
 		"Ice Man",
 		"Shadowcat",
 		"Storm",
-		"The Beast",
+		"The Beast", //answer
 		4);
 
 
