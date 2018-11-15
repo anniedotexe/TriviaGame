@@ -1,12 +1,12 @@
 /*
-Author:			Annie Wu
+Author: 		Annie Wu
 Assignment:		Homework #3
 
 Class:			CS 2560.01 - C++ Programming
 Date:			16 November 2018
 
 Purpose:		This file creates a trivia game for multiple players. It creates 10 trivia questions,
-				where each question has 4 possible answers with one correct answer.
+			where each question has 4 possible answers with one correct answer.
 
 */
 
