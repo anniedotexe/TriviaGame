@@ -37,7 +37,7 @@ void Player::print(Question *q) {
 		for (int i = 0; i < sizeWrong; i++) {
 			//if the question is in the right vector, print the question
 			if (wrong[i] == q) {
-				cout << "\t" << left << setw(57) << q->getQuestion() << setw(10) << " WRONG" << endl;
+				cout << "     " << left << setw(60) << q->getQuestion() << setw(10) << " WRONG" << endl;
 			}
 		}
 	}
@@ -47,7 +47,7 @@ void Player::print(Question *q) {
 		for (int i = 0; i < sizeRight; i++) {
 			//if the question is in the right vector, print the question
 			if (right[i] == q) {
-				cout << "\t" << left << setw(57) << q->getQuestion() << setw(10) << " RIGHT" << endl;
+				cout << "     " << left << setw(60) << q->getQuestion() << setw(10) << " RIGHT" << endl;
 			}
 		}
 	}
@@ -58,7 +58,7 @@ void Player::print(Question *q) {
 		for (int i = 0; i < sizeRight; i++) {
 			//if the question is in the right vector, print the question
 			if (right[i] == q) {
-				cout << "\t" << left << setw(57) << q->getQuestion() << setw(10) << " RIGHT" << endl;
+				cout << "     " << left << setw(60) << q->getQuestion() << setw(10) << " RIGHT" << endl;
 				return;
 			}
 		}
@@ -66,7 +66,7 @@ void Player::print(Question *q) {
 		for (int i = 0; i < sizeWrong; i++) {
 			//if the question is in the right vector, print the question
 			if (wrong[i] == q) {
-				cout << "\t" << left << setw(57) << q->getQuestion() << setw(10) << " WRONG" << endl;
+				cout << "     " << left << setw(60) << q->getQuestion() << setw(10) << " WRONG" << endl;
 				return;
 			}
 		}
