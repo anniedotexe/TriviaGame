@@ -1,5 +1,5 @@
 /*
-Author:			Annie Wu
+Author: 		Annie Wu
 Assignment:		Homework #3
 
 Class:			CS 2560.01 - C++ Programming
