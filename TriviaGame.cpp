@@ -106,8 +106,8 @@ int main() {
 	//number of players for the Player vector
 	int size;
 
-	cout << endl << "        Welcome to Annie's Superhero Trivia Game!!!        ";
-	cout << endl << "-----------------------------------------------------------" << endl << endl;
+	cout << endl << "               Welcome to Annie's Superhero Trivia Game!!!        ";
+	cout << endl << "-------------------------------------------------------------------------" << endl << endl;
 
 	//get number of players
 	cout << "Enter the number of players: ";
@@ -129,7 +129,7 @@ int main() {
 		//5 trivia questions total
 		for (int i = 0; i < 5; i++) {
 			cout << "\nQuestion " << i + 1 << endl;
-			cout << "-----------------------------------------------------------";
+			cout << "-------------------------------------------------------------------------";
 			//for each player j, answer question number i
 			for (int j = 0; j < size; j++) {
 				cout << "\nPlayer " << j + 1 << endl << endl;
@@ -150,7 +150,7 @@ int main() {
 			questionNumber++;
 		}
 
-		cout << endl << "------------------------------------------------------------------------";
+		cout << endl << "-------------------------------------------------------------------------";
 
 		//for each player print the question that were answered right
 		for (int i = 0; i < size; i++) {
@@ -176,9 +176,9 @@ int main() {
 		cin >> choice;
 		if (choice == "N" || choice == "n") {
 			run = false;
-			cout << endl << "------------------------------------------------------------------------";
-			cout << endl << "  Thanks for playing Annie's Superhero Trivia Game!! Hope you had fun!";
-			cout << endl << "------------------------------------------------------------------------";
+			cout << endl << "-------------------------------------------------------------------------";
+			cout << endl << "  - ~ - ~ - Thanks for playing Annie's Superhero Trivia Game! - ~ - ~ -  ";
+			cout << endl << "-------------------------------------------------------------------------";
 		}
 		else {
 			//reset right and wrong vectors for each player
@@ -195,7 +195,7 @@ int main() {
 		}
 	}
 
-	cout << endl;
+	cout << endl << endl;
 	system("pause");
 	return 0;
 }
