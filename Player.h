@@ -22,6 +22,6 @@ private:
 public:
 	void addRight(Question *q);
 	void addWrong(Question *q);
-	void printIfRight(Question *q);
+	void print(Question *q);
 	void resetRightWrong();
 };
