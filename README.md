@@ -1,2 +1,2 @@
 # Superhero Trivia Game
-Superhero Trivia Game in C++
+Multiplayer Superhero Trivia Game in C++
