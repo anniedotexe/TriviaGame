@@ -1,5 +1,7 @@
 # Multiplayer Superhero Trivia Game
 
+This is a trivia game centered around the topics of Marvel and DC Comics superheroes. <br>
+
 The user is prompted to enter the number players for the trivia game. <br>
 If there are multiple players, each player will be given the same question each round. <br>
 
