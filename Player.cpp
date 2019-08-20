@@ -17,17 +17,17 @@ Purpose:		This file contains the number of players and which questions each play
 using namespace std;
 
 //add question to right vector
-void Player::addRight(Question *q) {
+void Player::addRight(Question* q) {
 	right.push_back(q);
 }
 
 //add question to wrong vector
-void Player::addWrong(Question *q) {
+void Player::addWrong(Question* q) {
 	wrong.push_back(q);
 }
 
 //print question if answered right
-void Player::print(Question *q) {
+void Player::print(Question* q) {
 
 	int sizeRight = static_cast<int>(right.size());
 	int sizeWrong = static_cast<int>(wrong.size());

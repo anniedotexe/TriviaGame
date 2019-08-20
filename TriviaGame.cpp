@@ -6,7 +6,7 @@ Class:			CS 2560.01 - C++ Programming
 Date:			16 November 2018
 
 Purpose:		This file creates a trivia game for multiple players. It creates 10 trivia questions,
-			where each question has 4 possible answers with one correct answer.
+			where each question has 4 choices with one correct answer.
 
 */
 
@@ -20,7 +20,7 @@ using namespace std;
 int main() {
 
 	//Questions
-	Question **q = new Question *[10];
+	Question** q = new Question * [10];
 
 	//Question 1
 	q[0] = new Question("What city does Batman live in?",
@@ -114,14 +114,14 @@ int main() {
 	cin >> size;
 
 	//vector of players with user input size
-	vector<Player *> p(size);
+	vector<Player*> p(size);
 	for (int i = 0; i < size; i++) {
 		p[i] = new Player();
 	}
 
 	bool run = true;
 	//by q[] number, not Question #
-	int questionNumber = 0; 
+	int questionNumber = 0;
 	//user inputs a guess
 	int guess = 0;
 
@@ -154,7 +154,7 @@ int main() {
 
 		//for each player print the question that were answered right
 		for (int i = 0; i < size; i++) {
-			cout << "\nPlayer " << i+1 << " Results: " << endl;
+			cout << "\nPlayer " << i + 1 << " Results: " << endl;
 			//if it is first 5 questions (q[0] to q[4])
 			if (questionNumber < 6) {
 				for (int j = 0; j < 5; j++) {

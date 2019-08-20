@@ -16,12 +16,12 @@ using namespace std;
 class Player {
 
 private:
-	vector<Question *> right;
-	vector<Question *> wrong;
+	vector<Question*> right;
+	vector<Question*> wrong;
 
 public:
-	void addRight(Question *q);
-	void addWrong(Question *q);
-	void print(Question *q);
+	void addRight(Question* q);
+	void addWrong(Question* q);
+	void print(Question* q);
 	void resetRightWrong();
 };
